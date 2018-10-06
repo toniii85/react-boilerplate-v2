@@ -3,16 +3,12 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
-import numeralLocale from "./config/numeral-locale";
 import LoadingPage from "./components/LoadingPage";
 import { login, logout } from "./actions/auth";
 import "normalize.css/normalize.css";
-import "react-dates/lib/css/_datepicker.css";
-import "moment/locale/es";
 import "./styles/styles.scss";
 import { firebase } from "./firebase/firebase";
 
-numeralLocale();
 const store = configureStore();
 
 let hasRendered = false;
